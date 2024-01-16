@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 240;
+    --bg-color:hsl(var(--hue), 5%, 7%);
+    --text-color:hsl(var(--hue), 40%, 98%);
+    --primary-color:hsl(var(--hue), 40%, 98%);
+    --controls-bg-color:hsl(var(--hue), 0%, 14%);
+    --cards-button-color: hsl(194, 97%, 31%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.light {
+    --text-color:hsl(var(--hue), 5%, 7%);
+    --bg-color:hsl(var(--hue), 40%, 98%);
+    --primary-color:hsl(var(--hue), 5%, 7%);
+    --controls-bg-color:hsl(var(--hue), 5%, 7%);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display:grid;
+    height: 100vh;
+    place-content: center;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    color: var(--text-color);
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#app {
+    display: grid;
+    justify-items: center;
+}
+
+#ft {
+    padding: 3.2rem;
+    display: grid;
+    justify-items: center;
+}
+
+#focus {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex {
+    display: flex;
+}
+
+#timer {
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    align-items: end;
+}
+
+#controls {
+    margin-top: 0;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    align-items: baseline;
+}
+
+
+#cards {
+    margin-top: 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+#cards .material-symbols-outlined {
+    align-items: center;
+    font-size: 6.2rem;
+    border-radius: 2.4rem;
+    width: 13.8rem;
+    height: 15.2rem;
+    flex-shrink: 0;
+    background-color: var(--cards-button-color);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 3.6rem;
+}
+
+.secondary {
+    color: var(--button-secondary);
+}
+
+/* controls */
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+    display: none;
+}
