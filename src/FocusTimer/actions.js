@@ -17,8 +17,8 @@ export function reset() {
     sounds.buttonPress.play()
 }
 export function toggleMusicOn() {
-    state.isMute = document.documentElement.classList.toggle('music-on')
-
+    state.isMute = document.documentElement.classList.toggle('music-on')   
+    state.isMute = true
     if(state.isMute) {
         sounds.storeFront.pause()
         sounds.nature.pause()
@@ -31,8 +31,8 @@ export function toggleMusicOn() {
 }
 
 export function toggleMusicOff() {
-    state.isMute = document.documentElement.classList.toggle('music-on')
-
+    state.isMute = document.documentElement.classList.toggle('music-on')   
+    state.isMute = true
     if(state.isMute) {
         sounds.bgAudio.pause()
         sounds.storeFront.pause()
@@ -45,8 +45,8 @@ export function toggleMusicOff() {
 }
 
 export function toggleForest() {
-    state.isMute = document.documentElement.classList.toggle('music-on')
-
+    state.isMute = document.documentElement.classList.toggle('music-on')   
+    state.isMute = true
     if(state.isMute) {
         sounds.bgAudio.pause()
         sounds.storeFront.pause()
@@ -60,8 +60,8 @@ export function toggleForest() {
 }
 
 export function toggleFire() {
-    state.isMute = document.documentElement.classList.toggle('music-on')
-    
+    state.isMute = document.documentElement.classList.toggle('music-on')   
+    state.isMute = true
     if(state.isMute) {
         sounds.bgAudio.pause()
         sounds.storeFront.pause()
@@ -75,7 +75,7 @@ export function toggleFire() {
 
 export function toggleRain() {
     state.isMute = document.documentElement.classList.toggle('music-on')
-
+    state.isMute = true
     if(state.isMute) {
         sounds.bgAudio.pause()
         sounds.storeFront.pause()
@@ -88,8 +88,8 @@ export function toggleRain() {
 }
 
 export function toggleCoffee() {
-    state.isMute = document.documentElement.classList.toggle('music-on')
-
+    state.isMute = document.documentElement.classList.toggle('music-on')   
+    state.isMute = true
     if(state.isMute) {
         sounds.bgAudio.pause()
         sounds.cloudySnowing.pause()
